@@ -14,6 +14,9 @@ const BOARD: { name: string; position: string; school: string; photo?: string }[
 export default function AboutUs() {
   return (
     <>
+      {/* Page temporarily blanked — change `false` to `true` below to restore all sections */}
+      {false && (
+      <>
       <div id="about-section" className="max-w-5xl mx-auto mt-24 p-8 bg-white rounded shadow text-center">
         <h1 className="text-3xl font-bold mb-4">About Us</h1>
         <p className="text-lg leading-relaxed mb-4">
@@ -87,6 +90,8 @@ export default function AboutUs() {
         { label: "Contact Us", id: "contact-section" },
       ]}
     />
+      </>
+      )}
     </>
   );
 }

@@ -3,6 +3,8 @@ import FooterNav from './FooterNav';
 
 // Placeholder front-page photo — drop a Great Plains photo into public/ and change this filename.
 const HERO_IMAGE = 'teammidwest.webp';
+// Temporarily hidden — set to true to bring the front-page photo back.
+const SHOW_HERO = false;
 
 function Home() {
   const imageRef = useRef<HTMLDivElement>(null);
@@ -37,7 +39,7 @@ function Home() {
     <>
     <div className="flex flex-col w-full">
       {/* Show parallax div only if aspect > 4/3 */}
-      {aspect > 4/3 && (
+      {SHOW_HERO && aspect > 4/3 && (
         <div className="w-full h-[100vh] overflow-hidden relative mt-[80px]">
           <div
             ref={imageRef}
@@ -53,7 +55,7 @@ function Home() {
         </div>
       )}
       {/* Show static image if aspect <= 4/3 */}
-      {aspect <= 4/3 && (
+      {SHOW_HERO && aspect <= 4/3 && (
         <img
           src={`${import.meta.env.BASE_URL}${HERO_IMAGE}`}
           alt="Great Plains Collegiate Water Ski"
@@ -64,7 +66,7 @@ function Home() {
       <div
         className="w-full bg-white px-6 py-8 z-10 rounded-t-3xl"
         style={{
-          marginTop: aspect <= 4/3 ? '0' : '-30vh',
+          marginTop: !SHOW_HERO ? '80px' : aspect <= 4/3 ? '0' : '-30vh',
           left: aspect <= 4/3 ? 0 : undefined,
           right: aspect <= 4/3 ? 0 : undefined
         }}
@@ -75,7 +77,7 @@ function Home() {
             <p className="text-gray-500 text-lg m-0">No news yet — check back soon!</p>
           </div>
         <div id="tourney-section" className="mb-8"></div>
-        <h2 className="mt-20 text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 lg:mb-8 text-center">2025 TOURNEY SCHEDULE</h2>
+        <h2 className="mt-20 text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 lg:mb-8 text-center">2026 TOURNEY SCHEDULE</h2>
         <div className="max-w-4xl mx-auto w-full sm:w-full md:w-4/5 lg:w-3/4 xl:w-2/3">
 
         <div className="mb-8">
@@ -91,29 +93,29 @@ function Home() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="tournament-date">Sep 6-7</td>
-                  <td className="tournament-name">Hawkeye Skifest</td>
-                  <td>Evansdale, IA</td>
-                </tr>
-                <tr>
-                  <td className="tournament-date">Sep 6-7</td>
+                  <td className="tournament-date">Sep 5-6</td>
                   <td className="tournament-name">Saluki Showdown</td>
                   <td>DuQuoin, IL</td>
                 </tr>
                 <tr>
-                  <td className="tournament-date">Sep 13-14</td>
+                  <td className="tournament-date">Sep 12-13</td>
                   <td className="tournament-name">Midwest Shredfest</td>
                   <td>Center City, MN</td>
                 </tr>
                 <tr>
-                  <td className="tournament-date">Sep 13-14</td>
+                  <td className="tournament-date">Sep 12-13</td>
                   <td className="tournament-name">Sunflower Showdown</td>
                   <td>Lawrence, KS</td>
                 </tr>
                 <tr>
-                  <td className="tournament-date">Sep 20-21</td>
-                  <td className="tournament-name">Great Plains Conference Championships</td>
-                  <td>Cambridge, IA</td>
+                  <td className="tournament-date">Sep 19-20</td>
+                  <td className="tournament-name">Husker Rip Fest</td>
+                  <td>Ashland, NE</td>
+                </tr>
+                <tr>
+                  <td className="tournament-date">Sep 19-20</td>
+                  <td className="tournament-name">Hawkeye Skifest</td>
+                  <td>Evansdale, IA</td>
                 </tr>
               </tbody>
             </table>
@@ -134,13 +136,13 @@ function Home() {
               <tbody>
                 <tr>
                   <td className="tournament-date">Sep 26-28</td>
-                  <td className="tournament-name">2025 Collegiate Regionals</td>
-                  <td>PITS - Decatur, IL</td>
+                  <td className="tournament-name">2026 Collegiate Regionals</td>
+                  <td>Dream Lakes - Cambridge, IA</td>
                 </tr>
                 <tr>
-                  <td className="tournament-date">October 16-18</td>
-                  <td className="tournament-name">2025 Collegiate Nationals</td>
-                  <td>Imperial Lakes - Imperial, CA</td>
+                  <td className="tournament-date">October 15-17</td>
+                  <td className="tournament-name">2026 Collegiate Nationals</td>
+                  <td>Bell Acqua - Bel Acqua, CA</td>
                 </tr>
               </tbody>
             </table>
