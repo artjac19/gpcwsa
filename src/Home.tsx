@@ -71,11 +71,16 @@ function Home() {
           right: aspect <= 4/3 ? 0 : undefined
         }}
       >
+        {/* News section temporarily hidden — change `false` to `true` to restore */}
+        {false && (
+        <>
         <div id="news" className="mb-8"></div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">News</h2>
           <div className="bg-gray-50 border border-gray-200 rounded-xl px-6 py-10 max-w-2xl mx-auto mb-10 text-center shadow-sm">
             <p className="text-gray-500 text-lg m-0">No news yet — check back soon!</p>
           </div>
+        </>
+        )}
         <div id="tourney-section" className="mb-8"></div>
         <h2 className="mt-20 text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 lg:mb-8 text-center">2026 TOURNEY SCHEDULE</h2>
         <div className="max-w-4xl mx-auto w-full sm:w-full md:w-4/5 lg:w-3/4 xl:w-2/3">
@@ -153,7 +158,6 @@ function Home() {
     </div>
   <FooterNav
     links={[
-      { label: 'News', id: 'news' },
       { label: 'Tourney', id: 'tourney-section' }
     ]}
   />
