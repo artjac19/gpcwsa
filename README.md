@@ -22,13 +22,13 @@ Several things are mocked until the real info arrives. Each is a single-spot swa
 
 | Pending item | Where to swap |
 |---|---|
-| Brand red (currently a guess: `#C8102E`) | `src/index.css` → `--color-brand` (one line) |
-| Logo | Replace `public/logo.svg` and `public/logo-white.svg` |
+| Favicon (still the placeholder SVG; nav logo is the real `public/gpwsa-logo.png`) | Replace `public/logo.svg` and `public/logo-white.svg` |
 | Front-page photo (currently old Team Midwest photo) | Drop new photo in `public/`, change `HERO_IMAGE` const at the top of `src/Home.tsx` |
-| Board members (placeholder cards) | Edit the `BOARD` array at the top of `src/AboutUs.tsx` (supports optional `photo` filename) |
-| Bylaws (currently the old MCWSA bylaws PDF) | Replace `public/bylaws.pdf` |
+| Board members (About Us currently shows bylaws only) | Rebuild board section in `src/AboutUs.tsx` |
 | Tournament schedule | Tables in `src/Home.tsx` |
 | News (currently empty state) | Replace the empty-state card in `src/Home.tsx` with `<News …/>` items (`src/News.tsx` component is ready to use) |
+
+Done: brand red `#800517` (`src/index.css` → `--color-brand`), nav logo (`public/gpwsa-logo.png`, cropped from `GPWSA_LOGO.png`), GPCWSA bylaws effective 2026-03-01 (`public/bylaws.pdf`), team list from the master list (`TEAMS` array in `src/TeamInfo.tsx`).
 
 ## When gpcwsa.org is ready
 

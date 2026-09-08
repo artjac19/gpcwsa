@@ -2,8 +2,8 @@
 @import "tailwindcss";
 
 @theme {
-  /* Placeholder brand red — swap this ONE line when the real GPCWSA color is decided */
-  --color-brand: #C8102E;
+  /* Official GPCWSA brand red */
+  --color-brand: #800517;
 }
 
 body {

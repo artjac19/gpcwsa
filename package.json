@@ -1,7 +1,7 @@
 {
   "name": "gpcwsa",
   "private": true,
-  "homepage": "https://artjac19.github.io/gpcwsa",
+  "homepage": "https://gpwsa.org",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -9,7 +9,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist",
+    "deploy": "npm run build && gh-pages -d dist --cname gpwsa.org",
     "push": "git add . && git commit -m \"Update site\" && git push origin master"
   },
   "dependencies": {

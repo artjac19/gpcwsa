@@ -40,7 +40,7 @@ export default function Resources() {
     <li>To see exactly what needs to be done to earn each rating, start by downloading the Official’s Applications below:</li>
   </ul>
   <br />
-  <div className="mt-0 mb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <div className="mt-0 mb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <a
       href={`${import.meta.env.BASE_URL}AWSAAssistantJudgeApp.pdf`}
       target="_blank" rel="noopener noreferrer"
@@ -64,14 +64,6 @@ export default function Resources() {
       style={{ textDecoration: 'none' }}
     >
       AWSA Assistant Driver Application
-    </a>
-    <a
-      href={`${import.meta.env.BASE_URL}bylaws.pdf`}
-      target="_blank" rel="noopener noreferrer"
-      className="flex items-center justify-center h-24 rounded-lg bg-brand shadow hover:bg-brand/85 transition-colors font-bold text-white text-center text-lg px-4"
-      style={{ textDecoration: 'none' }}
-    >
-      Conference Bylaws
     </a>
   </div>
   <h3 className="text-xl font-bold mt-6 mb-2">Assistant Judge</h3>
